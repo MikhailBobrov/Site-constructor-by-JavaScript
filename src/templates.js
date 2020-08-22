@@ -6,7 +6,7 @@ function title (block) {
     console.log(block.options.tag)
 
     //ecmascript 6
-    const {tag,styles} = block.options
+    const {tag, styles} = block.options
     // const tag = block.options.tag
     // const styles = block.options.styles
 
@@ -23,7 +23,7 @@ function title (block) {
 //функция col в функции row
 function text (block) {
     return row (col(`
-        <p>${block.value}</p>
+        <p style="margin-bottom: 0">${block.value}</p>
     `), block.options.styles)
 }
 
@@ -36,6 +36,14 @@ function textColumns (block) {
     //join - метод убирает запятые у массива - так как map возвращает новый массив
 }
 
+//картинка
+function image (block) {
+    const {alt, styles, imageStyles} = block.options
+    const html = `<img src="${block.value}" alt="${alt}" style="${imageStyles}" >`
+    return row(html, styles)
+}
+
+
 // export const templates = {
 //     title: 'title',
 //     text: 'text',
@@ -43,4 +51,4 @@ function textColumns (block) {
 // }
 
 //new sintaksis
-export const templates = {title, text, textColumns}
+export const templates = {title, text, textColumns, image}
