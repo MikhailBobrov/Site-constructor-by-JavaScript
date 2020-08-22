@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
+1 день
+
 npm install --save-dev webpack webpack-cli webpack-dev-server
 sudo npm i -g webpack
 sudo npm i -g webpack-cli
@@ -12,6 +14,26 @@ npm install --save-dev html-webpack-plugin
 <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
 в webpack стили подключаются не через html а через js - import './styles/main.css'
 npm install --save-dev style-loader css-loader
+
+2 день
+npm run serve
+model js - export
+import model into index.js
+генерируем html в файле index.js
+
+
+model - templates - index
+в model - наша модель
+в templates - наши функции ктр что то могут - отрисовка
+в utils - наши классы
+мы данные функции экспортируем в index
+в index мы нашу model перебираем и(block - это наши элементы - объекты в моделе)
+
+оптимизируем - убираем в template дублирование классов - создаем utils.js
+в options - напишем наши стили
+добавим еще одним аргументом к нашеим функциям в templates.js - block.options.styles
+плюс в utils.js добавим еще как стиль
+
 
 </body>
 </html>
